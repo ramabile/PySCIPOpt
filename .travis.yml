@@ -22,8 +22,7 @@ before_install:
   - wget http://scip.zib.de/download/release/scipoptsuite-$VERSION.tgz
   - tar xf scipoptsuite-$VERSION.tgz
   - cmake -Hscipoptsuite-$VERSION -Bbuild #-DCMAKE_INSTALL_PREFIX=~/scipdir
-  - cd build
-  - sudo make install
+  - cd build && sudo make install && cd ..
 
 install:
   - pip install cython networkx pytest-cov #codecov
