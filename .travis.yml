@@ -25,6 +25,7 @@ before_install:
   - cd build && sudo make install && cd ..
 
 install:
+  - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
   - pip install cython networkx pytest-cov #codecov
   - python setup.py install
 
